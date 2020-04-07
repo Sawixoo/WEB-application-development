@@ -39,6 +39,7 @@
       <workItem from="1586233069603" duration="627000" />
       <workItem from="1586235144907" duration="1071000" />
       <workItem from="1586236300005" duration="1800000" />
+      <workItem from="1586242377104" duration="406000" />
     </task>
     <servers />
   </component>
@@ -50,9 +51,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="987" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1586236953740" />
-    <state x="326" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1586236305403">
+    <state x="326" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1586242378078">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="326" y="242" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586236305403" />
+    <state x="326" y="242" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586242378078" />
   </component>
 </project>
