@@ -100,7 +100,11 @@ desired effect
                                     <a href="#" class="btn btn-default btn-flat">Профиль</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Выход</a>
+                                <form method="POST">
+
+                                    <button type="submit" class="btn btn-default btn-flat" name="out">Выход</button>
+
+                                </form>
                                 </div>
                             </li>
                         </ul>
