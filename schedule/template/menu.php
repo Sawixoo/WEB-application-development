@@ -9,6 +9,9 @@
             <li <?=($_SERVER['PHP_SELF']=='/list-teacher.php')?'class="active"':'';?>>
                 <a href="list-teacher.php"><i class="fa fa-users"></i><span>Преподаватели</span></a>
             </li>
+            <li <?=($_SERVER['PHP_SELF']=='/list-student.php')?'class="active"':'';?>>
+                <a href="list-student.php"><i class="fa fa-users"></i><span>Студенты</span></a>
+            </li>
         </ul>
     </section>
 </aside>
