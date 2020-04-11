@@ -10,6 +10,12 @@ class Subject extends Table
     public $active=1;
     public function validate()
     {
+        if (!empty($this->name) &&
+            !empty($this->otdel_id) &&
+            !empty($this->hours)&&
+            !empty($this->active)) {
+            return true;
+        }
         return false;
     }
 }
