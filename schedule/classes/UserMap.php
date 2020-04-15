@@ -3,6 +3,30 @@
 
 class UserMap extends BaseMap
 {
+
+    const USER = 'user';
+    const TEACHER = 'teacher';
+    const STUDENT = 'student';
+
+    public function identity($id){
+        if ((new TeacherMap())->findById($id)->validate()) {
+                return self::TEACHER;
+            }
+            if ((new StudentMap())->findById($id)->validate()) {
+                return self::STUDENT;
+            }
+            if ($this->findById($id)->validate()) {
+                return self::USER;
+            }
+        return null; 
+        }
+
+
+
+
+
+
+
     public function auth($login, $password){
         $login = $this->db->quote($login);
             $res = $this->db->query("SELECT user.user_id, CONCAT(user.lastname,' ', user.firstname, ' ', IfNull(user.patronymic,'')) AS fio, "."user.pass, role.sys_name, role.name FROM user "."INNER JOIN role ON user.role_id=role.role_id "."WHERE user.login = $login AND user.active = 1");
