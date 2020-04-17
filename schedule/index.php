@@ -21,6 +21,7 @@ require_once 'template/header.php';
                 <h3><?=$header;?></h3>
             </section>
             <div class="box-body">
+           <?php if ($userIdentity == UserMap::TEACHER): ?>
                 <?php if ($schedules) : ?>
                 <table class="table table-bordered table-hover">
                 <?php foreach ($schedules as $day) :?>
@@ -54,6 +55,46 @@ require_once 'template/header.php';
                 <?php else: ?>
                     <p>Для Вас расписание отутствует</p>
                 <?php endif; ?>
+                <?php endif; ?>
+
+
+
+                <?php if ($userIdentity == UserMap::STUDENT): ?>
+                    <?php if ($schedules) : ?>
+                        <h3>Группа: <?=$schedules['gruppaName'];?></h3>
+                        <table class="table table-bordered table-hover">
+                        <?php foreach ($schedules['schedules'] as $day) :?>
+                            <tr>
+                                <th colspan="4">
+                                <h4 class="center-block">
+                                <?=$day['name'];?>
+                                </h4>
+                                </th>
+                                </tr>
+                                <?php if ($day['schedule']) : ?>
+                                <?php foreach ($day['schedule'] as $schedule) : ?>
+                                <tr>
+                            
+                            <tr>
+                                <td><?=$schedule['lesson_num'];?></td>
+                                <td><?=$schedule['subject'];?></td>
+                                <td><?=$schedule['classroom'];?></td>
+                                <td><?=$schedule['fio'];?></td>
+                            </tr>
+                            <?php endforeach;?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="3">Отутствует расписание на этот день</td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php endforeach;?>
+                        </table>
+                        <?php else: ?>
+                            <p>Для Вас расписание отутствует</p>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                
             </div>
         </div>
     </div>

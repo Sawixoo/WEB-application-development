@@ -13,15 +13,13 @@ if ((new TeacherMap())->findById($idUser) ->validate()) {
 }
 $schedule = new ScheduleMap();
 $day = $schedule->findDayById($idDay);
-$header = 'Добавить расписание. День: '.$day->name. '.
-Преподаватель: '.$teacher->fio;
-require_once 'template/header.php';
+$header = 'Добавить расписание. День: '.$day->name. '.Преподаватель: '.$teacher->fio;require_once 'template/header.php';
 ?>
 <section class="content-header">
         <ol class="breadcrumb">
             <li><a href="/index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
             <li><a href="list-teacher-schedule.php">Расписание</a></li>
-            <li><a href="list-schedule.php?id=<?=$idUser;?>">Расписаниепреподавателя</a></li>
+            <li><a href="list-schedule.php?id=<?=$idUser;?>">Расписание преподавателя</a></li>
             <li class="active"><?=$header;?></li>
         </ol>
 </section>

@@ -32,6 +32,11 @@
             <li <?=($_SERVER['PHP_SELF']=='/list-teacher-schedule.php')?'class="active"':'';?>>
                 <a href="list-teacher-schedule.php"><i class="fa fa-users"></i><span>План</span></a>
             </li>
+            <li <?=($_SERVER['PHP_SELF']=='/list-teacher-schedule.php')?'class="active"':'';?>>
+                <a href="list-teacher-schedule.php"><i class="fa fa-users"></i><span>Управление расписанием</span></a>
+            </li>
+
+
         </ul>
     </section>
 </aside>

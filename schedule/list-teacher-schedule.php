@@ -28,16 +28,14 @@ $teachers = (new LessonPlanMap())->findTeachers($page*$size-$size, $size);
             <section class="content-header">
                 <h1><?=$header;?></h1>
                 <ol class="breadcrumb">
-                    <li><a href="/index.php"><i class="fa
-fa-dashboard"></i> Главная</a></li>
+                    <li><a href="/index.php"><i class="fa fa-dashboard"></i> Главная</a></li>
                     <li class="active"><?=$header;?></li>
                 </ol>
             </section>
             <?php if ($teachers) : ?>
             <div class="box-body">
 
-                <table class="table table-bordered table-
-hover">
+                <table class="table table-bordered table-hover">
 
                     <thead>
                     <tr>
@@ -65,15 +63,11 @@ hover">
                                     $teacher->sum_hours : 0;?></td>
                             <td>
 
-                                <a href="list-
-plan.php?id=<?=$teacher->user_id;?>" title="План
-преподавателя"><i class="fa fa-table"></i></a>&nbsp;
+                                <a href="list-plan.php?id=<?=$teacher->user_id;?>" title="План преподавателя"><i class="fa fa-table"></i></a>&nbsp;
 
-                                <a href="list-
-schedule.php?id=<?=$teacher->user_id;?>"
+                                <a href="list-schedule.php?id=<?=$teacher->user_id;?>"
 
-                                   title="Расписание преподавателя"><i class="fa fa-
-calendar-plus-o"></i></a>
+                                   title="Расписание преподавателя"><i class="fa fa-calendar-plus-o"></i></a>
 
                             </td>
                         </tr>
